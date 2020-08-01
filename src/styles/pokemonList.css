@@ -1,0 +1,56 @@
+.pokemonTable {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemonCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 28%;
+    min-width: 260px;
+    height: 4em;
+    padding-bottom: 1em;
+    margin: .7em 1em;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+.pokemonCard__font {
+    color: black;
+}
+
+.pokemonCard__id {
+    font-family: monospace;
+    font-size: 1.1em;
+}
+
+.searchBar__wrapper {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    position: relative;
+}
+
+.searchBar {
+    border: none;
+    box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.75);
+    padding: 1em;
+    border-radius: 50px;
+    width: clamp(280px, 80vw, 600px);
+    margin: 1em 0;
+}
+
+.searchBar__icon {
+    position: absolute;
+    right: .5em;
+    top: 1.25em;
+}
+
+.stickyContainer {
+    position: sticky;
+    top: 70px;
+}

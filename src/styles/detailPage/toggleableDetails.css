@@ -1,0 +1,45 @@
+.pokemonDetail__toggleables__item {
+    border: 0;
+}
+
+.pokemonDetail__toggleables__content {
+    font-size: clamp(14px, 2vw, 18px);
+    font-family: monospace;
+}
+
+.pokemonDetail__toggleables__header {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 75px;
+    background: var(--color-white);
+    padding: 5px 0;
+}
+
+.pokemonDetail__toggleables__header p {
+    margin-left: .5em;
+}
+
+.pokemonDetail__toggleables {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    max-width: 950px;
+    height: fit-content;
+    margin: 1em 0;
+}
+
+.toggleIcon {
+    display: inline-block;
+}
+
+.stat {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.stat__value {
+    height: 1rem;
+    border-radius: 5px;
+    transition: 1s all;
+}

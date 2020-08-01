@@ -1,0 +1,70 @@
+.moveTile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: monospace;
+    background: rgb(241, 204, 204);
+    margin: 1em auto;
+    padding: .5em;
+    font-size: clamp(14px, 2vw, 18px);
+    overflow-x: hidden;
+}
+
+.moveTile__firstCol {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 380px;
+    min-height: 2em;
+    background: rgb(241, 204, 204);
+    padding: .5em;
+}
+
+.moveTile__stats {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: .5em 0;
+}
+
+.labeledData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(150px, 50vw);
+}
+
+.labeledData__item {
+    min-width: 65px;
+}
+
+.labeledData .label {
+    font-size: .8em;
+}
+
+.moveTile__name {
+    text-align: left;
+    white-space: nowrap;
+    margin-right: 1em;
+    font-weight: 550;
+}
+
+.typeAndClass {
+    height: 1em;
+    display: flex;
+    width: 70px;
+    justify-content: space-between;
+}
+
+.moveTile__effect {
+    text-align: justify;
+}
+
+@media screen and (min-width:800px) {
+    .moveTile__firstCol {
+        margin-right: 2em;
+    }
+}

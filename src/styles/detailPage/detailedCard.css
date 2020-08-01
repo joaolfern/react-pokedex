@@ -1,0 +1,82 @@
+.pokemonDetail {
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemonDetail__item {
+    transition: all 2s;
+}
+
+.pokemonDetail__fixSize {
+    height: 200px;
+    width: 200px;
+}
+
+.pokemonDetail__main {
+    width: 160px;
+    flex-direction: column;
+}
+
+.pokemonDetail__wrapper {
+    width: fit-content;
+}
+
+.pokemonDetail__main__content {
+    display: flex;
+    width: 100%;
+}
+
+.pokemonDetail__main__typeAndImg {
+    position: relative;
+    flex-direction: column;
+}
+
+.altSprites-Bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemonImage {
+    align-self: flex-end;
+    min-height: 96px;
+    min-width: 96px;
+}
+
+.icon {
+    margin: .3em 0;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.maleIcon {
+    color: rgb(82, 82, 235);
+}
+
+.femaleIcon {
+    color: rgb(231, 36, 22);
+}
+
+.shinnyIcon {
+    padding: 4px 2px;
+    border-radius: 200%;
+    font-size: 1.2em;
+    color: rgb(243, 1, 211);
+    transform: scale(.9, 1.2);
+}
+
+.type-container {
+    display: flex;
+    justify-content: center;
+}
+
+.type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.3em;
+    width: 48px;
+    border-radius: 50px;
+    font-size: .8em;
+    color: white;
+}

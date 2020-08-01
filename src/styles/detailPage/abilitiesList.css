@@ -1,0 +1,18 @@
+.ability {
+    font-size: .9em;
+    background: var(--color-light);
+    padding: .5em;
+    margin-top: 1em;
+}
+
+
+.ability__name {
+    text-align: left;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.ability__desc {
+    text-align: justify;
+    text-indent: 2em;
+}
