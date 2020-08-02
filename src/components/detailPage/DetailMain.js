@@ -14,6 +14,7 @@ function DetailMain({ pokemon, currentSprite, changeSprite, stopLoading }) {
                     className='pokemonImage'
                     src={pokemon.sprites[currentSprite]}
                     onLoad={stopLoading}
+                    alt={pokemon.name}
                 />
 
                 <div className='type-container'>

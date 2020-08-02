@@ -14,17 +14,19 @@ function AbilitiesList({ abilities, setLoading }) {
 
             setAbilitiesData(prev => [...prev, abilityData])
         })
+
         return () => {
-            counter = 0
             setLoading(true)
         }
 
-    }, [])
+    }, [setLoading]) //eslint-disable-line
+
     async function fetchData(url) {
         const response = await fetch(url)
         const data = await response.json()
 
         counter++
+
         if (counter === arrayURLs.length)
             setLoading(false)
 

@@ -34,7 +34,10 @@ function ServiceDetail() {
 
             await setPokemon(data)
         }
+
         fetchData()
+
+        window.scrollTo(0, 0)
 
         return () => {
             setToggle(prev => ({ ...prev, moves: false, abilities: false }))

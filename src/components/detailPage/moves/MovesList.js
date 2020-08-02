@@ -18,7 +18,7 @@ function MovesList({ moves, loading, setLoading }) {
         return () => {
             setCounter(0)
         }
-    }, [])
+    }, []) //eslint-disable-line
 
     function fetchData(from = 'somewhere else') {
         const howMany = from === 'infiniteScroll' ? 5 : 10

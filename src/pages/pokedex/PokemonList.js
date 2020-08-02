@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useCallback } from "react"
 
 import usePokemon from '../../hooks/usePokemonList'
 
@@ -8,11 +8,12 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import '../../styles/pokemonList.css'
 
 function PokemonList() {
+
     const [searchPokemon, setSearchPokemon] = useState({ text: '', itsBeenClean: false })
 
-    const {
-        List
-    } = usePokemon(searchPokemon.text, searchPokemon.itsBeenClean, handleCleaned)
+    const handleCleaned = useCallback(() => {
+        setSearchPokemon(prev => ({ ...prev, itsBeenClean: false }))
+    }, [])
 
     function handleChange(e) {
         const { value } = e.target
@@ -20,9 +21,8 @@ function PokemonList() {
         setSearchPokemon({ text: value, itsBeenClean: value === '' })
     }
 
-    function handleCleaned() {
-        setSearchPokemon(prev => ({ ...prev, itsBeenClean: false }))
-    }
+    const { List } = usePokemon(searchPokemon.text, searchPokemon.itsBeenClean, handleCleaned)
+
 
     return (
         <>

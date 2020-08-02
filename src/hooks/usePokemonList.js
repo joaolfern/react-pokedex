@@ -22,7 +22,7 @@ function usePokemonList(searchPokemon, itsBeenClean, handleCleaned) {
         return () => {
             counter = 0
         }
-    }, [pokemonListData])
+    }, [pokemonListData]) //eslint-disable-line
 
     useEffect(() => {
         if (!pokemonListViewData.length) {  //check if the view data is empty
@@ -36,7 +36,7 @@ function usePokemonList(searchPokemon, itsBeenClean, handleCleaned) {
             setPokemonListViewData([])      //that would happen if they have scrolled all the way down before searching anything
             counter = 0
         }
-    }, [itsBeenClean])
+    }, [itsBeenClean, handleCleaned])
 
     async function fetchContextData() {
 
