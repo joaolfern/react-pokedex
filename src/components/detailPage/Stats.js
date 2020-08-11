@@ -1,9 +1,8 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import getColor from 'number-to-color'
 
 function Stats({ stats }) {
 
-    const someStat = useRef(null)
 
     return (
         <div className='statsList'>
@@ -20,7 +19,7 @@ function Stats({ stats }) {
                     }
 
                     return (
-                        <div className='stat' key={name} ref={someStat}>
+                        <div className='stat' key={name} >
                             <p className='stat__name'>{name}</p>
                             <div
                                 className='stat__value'
