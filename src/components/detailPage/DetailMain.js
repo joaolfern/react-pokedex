@@ -9,7 +9,6 @@ function DetailMain({ pokemon, currentSprite, changeSprite, stopLoading }) {
     return (
         <div className='pokemonDetail__main__content'>
             <div className='pokemonDetail__main__typeAndImg centerFlex'>
-
                 <img
                     className='pokemonImage'
                     src={pokemon.sprites[currentSprite]}
@@ -19,7 +18,6 @@ function DetailMain({ pokemon, currentSprite, changeSprite, stopLoading }) {
 
                 <div className='type-container'>
                     {pokemon.types.map(item => {
-
                         return (
                             <div className={`type`} key={item.type.name}>
                                 <TypeLabel type={item.type.name} />
@@ -27,7 +25,6 @@ function DetailMain({ pokemon, currentSprite, changeSprite, stopLoading }) {
                         )
                     })}
                 </div>
-
             </div>
 
             <div className='altSprites-Bar '>

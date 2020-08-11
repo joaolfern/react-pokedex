@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 
 import '../../styles/detailPage/abilitiesList.css'
 
+import getCapitalizedWord from '../../getCapitalizedWord'
+
 function AbilitiesList({ abilities, setLoading }) {
     const [abilitiesData, setAbilitiesData] = useState([])
 
@@ -37,7 +39,7 @@ function AbilitiesList({ abilities, setLoading }) {
         <div>
             {abilitiesData.map(ability => (
                 <div className='ability' key={ability.name}>
-                    <p className='ability__name'>{ability.name}</p>
+                    <p className='ability__name'>{getCapitalizedWord(ability.name)}</p>
                     <p className='ability__desc'>{ability.effect_entries.find(desc => desc.language.name === 'en').short_effect}</p>
                 </div>
             ))}

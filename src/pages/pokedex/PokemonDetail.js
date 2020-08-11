@@ -10,6 +10,7 @@ import ToggleableItem from "../../components/detailPage/ToggleableItem"
 import '../../styles/detailPage/detailedCard.css'
 import '../../styles/spinner.css'
 import '../../styles/detailPage/toggleableDetails.css'
+import getCapitalizedWord from "../../getCapitalizedWord"
 
 function ServiceDetail() {
     const [loading, setLoading] = useState(true)
@@ -69,7 +70,7 @@ function ServiceDetail() {
                     className='pokemonDetail__item  pokemonDetail__fixSize centerFlex'
                 >
                     <div className='pokemonDetail__main centerFlex'>
-                        <h2>{pokemon.name}</h2>
+                        <h2>{pokemon.name && getCapitalizedWord(pokemon.name)}</h2>
                         <DetailMain
                             pokemon={pokemon}
                             currentSprite={currentSprite}

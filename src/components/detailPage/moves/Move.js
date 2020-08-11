@@ -3,6 +3,8 @@ import TypeLabel from '../TypeLabel'
 import MoveClass from './MoveClass'
 import LabeledData from './LabeledData'
 
+import getCapitalizedWord from '../../../getCapitalizedWord'
+
 function Move({ data }) {
     return (
         <div className='moveTile'>
@@ -10,7 +12,7 @@ function Move({ data }) {
             <div className='moveTile__firstCol'>
 
                 <div className='moveTile__nameAndType'>
-                    <p className='moveTile__name'>{data.name}</p>
+                    <p className='moveTile__name'>{getCapitalizedWord(data.name)}</p>
                     <div className='typeAndClass'>
                         <TypeLabel className='typeAndClass__item' type={data.type} />
                         <MoveClass className='typeAndClass__item' moveClass={data.damage_class} />

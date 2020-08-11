@@ -5,6 +5,7 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 import { DataContext } from '../contexts/dataContext'
 
 import getBackground from '../regionalStyles'
+import getCapitalizedWord from '../getCapitalizedWord'
 import Spinner from '../components/Spinner'
 
 const howManyToFetch = 30
@@ -89,7 +90,7 @@ function usePokemonList(searchPokemon, itsBeenClean, handleCleaned) {
                         key={index}
                     >
                         <h3 className='pokemonCard__font'>
-                            {pokemon.name}
+                            {getCapitalizedWord(pokemon.name)}
                         </h3>
                         <p className='pokemonCard__font pokemonCard__id'>#{pokemon.dexNumber < 10 ? `00${pokemon.dexNumber}` : pokemon.dexNumber < 100 ? `0${pokemon.dexNumber}` : pokemon.dexNumber}</p>
                     </Link>
