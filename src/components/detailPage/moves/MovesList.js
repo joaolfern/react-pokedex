@@ -53,7 +53,6 @@ function MovesList({ moves, loading, setLoading }) {
     }
 
     return (
-
         <InfiniteScroll
             dataLength={movesData.length}
             next={() => {

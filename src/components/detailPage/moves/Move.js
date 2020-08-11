@@ -1,6 +1,5 @@
 import React from 'react'
 import TypeLabel from '../TypeLabel'
-import MoveClass from './MoveClass'
 import LabeledData from './LabeledData'
 
 import getCapitalizedWord from '../../../getCapitalizedWord'
@@ -15,7 +14,9 @@ function Move({ data }) {
                     <p className='moveTile__name'>{getCapitalizedWord(data.name)}</p>
                     <div className='typeAndClass'>
                         <TypeLabel className='typeAndClass__item' type={data.type} />
-                        <MoveClass className='typeAndClass__item' moveClass={data.damage_class} />
+                        <div className='typeAndClass__item'>
+                            <img src={`https://play.pokemonshowdown.com/sprites/categories/${getCapitalizedWord(data.damage_class)}.png`} alt={`${getCapitalizedWord(data.damage_class)} move`} />
+                        </div>
                     </div>
                 </div>
 
