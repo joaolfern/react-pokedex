@@ -1,14 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import getColor from 'number-to-color'
 
-function Stats({ stats, setLoading }) {
+function Stats({ stats }) {
 
     const someStat = useRef(null)
-
-    useEffect(() => {
-        if (someStat.current)
-            setLoading(false)
-    }, [someStat.current, setLoading]) //eslint-disable-line
 
     return (
         <div className='statsList'>

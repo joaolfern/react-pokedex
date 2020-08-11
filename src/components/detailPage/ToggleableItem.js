@@ -10,7 +10,7 @@ import Spinner from '../Spinner'
 import Stats from './Stats'
 
 function ToggleItem({ isToggled, handleToggle, name, toRender }) {
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(name === 'stats' ? false : true)
 
     return (
         <>
